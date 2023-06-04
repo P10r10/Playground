@@ -10,9 +10,9 @@ def merge_files(a: str, b: str):
         doc_b = fitz.open(b)  # open the 2nd document
         doc_a.insert_pdf(doc_b)  # merge the docs
         doc_a.save("merged.pdf")  # save the merged document
+        print("Files merged.")
     except:
         print(f"Error opening file {b}")
-    print("Files merged.")
 
 
 def main():
