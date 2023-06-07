@@ -29,3 +29,16 @@ for person in people:
     for number in person["fav_numbers"]:
         print(f"{number} ", end="")
     print()
+
+brand = input("What kind of car? ")
+print(f"Let me see if I can find you a {brand.title()}.")
+people = int(input("How many people for dinner? "))
+if people > 8:
+    print("You have to wait for a table.")
+else:
+    print("Your table is ready!")
+number = int(input("Pick a number: "))
+if number % 10 == 0:
+    print(f"{number} is a multiple of 10.")
+else:
+    print(f"{number} is not a multiple of 10.")
