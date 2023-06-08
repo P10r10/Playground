@@ -2,9 +2,11 @@ class Solution:
     def countNegatives(self, grid: list[list[int]]) -> int:
         count = 0
         for row in grid:
-            for n in row:
-                if n < 0:
+            for i in range(len(row) - 1, -1, -1):
+                if row[i] < 0:
                     count += 1
+                else:
+                    break
         return count
 
 
