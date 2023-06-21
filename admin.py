@@ -4,6 +4,11 @@ from restaurants import User
 class Admin(User):
     def __init__(self, first_name, last_name, age, privileges: list[str]):
         super().__init__(first_name, last_name, age)
+        self.privileges = Privileges(privileges)
+
+
+class Privileges:
+    def __init__(self, privileges: list[str]):
         self.privileges = privileges
 
     def show_privileges(self):
@@ -18,4 +23,4 @@ privileges = [
 
 
 admin = Admin("Almeida", "Santiago", 49, privileges)
-admin.show_privileges()
+admin.privileges.show_privileges()
