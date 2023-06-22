@@ -15,12 +15,12 @@ class Privileges:
         print("Privileges:\n", ", ".join(self.privileges))
 
 
-privileges = [
-    "can add post",
-    "can delete post",
-    "can ban user",
-]
+if __name__ == "__main__":
+    privileges = [
+        "can add post",
+        "can delete post",
+        "can ban user",
+    ]
 
-
-admin = Admin("Almeida", "Santiago", 49, privileges)
-admin.privileges.show_privileges()
+    admin = Admin("Almeida", "Santiago", 49, privileges)
+    admin.privileges.show_privileges()
