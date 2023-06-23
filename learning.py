@@ -9,3 +9,12 @@ for line in contents.splitlines():
 print()
 contents = contents.replace("Python", "Java")
 print(contents)
+
+names = []
+while True:
+    name = input("What is your name? (q to exit): ")
+    if name == "q":
+        break
+    names.append(name)
+path = Path("guest.txt")
+path.write_text("\n".join(names))
