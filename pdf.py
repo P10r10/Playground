@@ -29,13 +29,20 @@ def delete_pages(file_name: str, page_nb: int) -> None:
 
 
 def main():
-    doc_a = input("1st file? ")
-    doc_b = input("2nd file? ")
-    merge_files(doc_a, doc_b)
 
-    # doc = input("File name? ")
-    # page_nb = int(input("Page number? "))
-    # delete_pages(doc, page_nb)
+    while True:
+        print("1 - Merge files\n2 - Delete page\n")
+        option = input("Option? (ENTER to exit)")
+        if option == "":
+            break
+        if option == "1":
+            doc_a = input("1st file? ")
+            doc_b = input("2nd file? ")
+            merge_files(doc_a, doc_b)
+        if option == "2":
+            doc = input("File name? ")
+            page_nb = int(input("Page number? "))
+            delete_pages(doc, page_nb)
 
 
 main()
